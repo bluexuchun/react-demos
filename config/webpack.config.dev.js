@@ -144,7 +144,37 @@ module.exports = {
             include: paths.appSrc,
             loader: require.resolve('babel-loader'),
             options: {
-
+              plugins:[
+                ['import',
+                  [
+                    { libraryName:'antd',style:'css'}
+                  ]
+                ],[
+                  'import',
+                  [
+                    {
+                      "libraryName": "@material-ui/core",
+                      "style":'true'
+                    }
+                  ]
+                ],[
+                  'import',
+                  [
+                    {
+                      "libraryName": "@material-ui/icons",
+                      "style":'true'
+                    }
+                  ]
+                ],[
+                  'import',
+                  [
+                    {
+                      "libraryName":'ant-design-pro',
+                      "style":'true'
+                    }
+                  ]
+                ]
+              ],
               // This is a feature of `babel-loader` for webpack (not Babel itself).
               // It enables caching results in ./node_modules/.cache/babel-loader/
               // directory for faster rebuilds.

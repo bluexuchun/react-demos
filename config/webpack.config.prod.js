@@ -149,7 +149,38 @@ module.exports = {
             include: paths.appSrc,
             loader: require.resolve('babel-loader'),
             options: {
-
+              plugins:[
+                [
+                  'import',
+                  [
+                    { libraryName:'antd',style:'css'}
+                  ]
+                ],[
+                  'import',
+                  [
+                    {
+                      "libraryName": "@material-ui/core",
+                      "style":'true'
+                    }
+                  ]
+                ],[
+                  'import',
+                  [
+                    {
+                      "libraryName": "@material-ui/icons",
+                      "style":'true'
+                    }
+                  ]
+                ],[
+                  'import',
+                  [
+                    {
+                      "libraryName":'ant-design-pro',
+                      "style":'true'
+                    }
+                  ]
+                ]
+              ],
               compact: true,
             },
           },
