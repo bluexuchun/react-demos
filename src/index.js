@@ -9,7 +9,9 @@ import Index from './pages/index/index';
 
 const theme = createMuiTheme({
   palette: {
-    primary: purple,
+    primary: {
+      main:'#2196f3'
+    },
     secondary: green,
   },
   status: {
